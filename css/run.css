@@ -1,0 +1,90 @@
+.content{
+	width: 900px;
+	height: 600px;
+	margin: auto;
+	background: lightblue;
+	position: relative;
+}
+.sun{
+	width: 150px;
+	height: 150px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.img{
+	width: 150px;
+	height: 150px;
+
+	transition: transform 7s linear;
+}
+.img:hover{
+	transform:rotate(720deg);
+}
+.girl{	
+
+	width: 180px;
+	height: 300px;
+   background-image: url(../img/charector.png);
+	-webkit-animation-name: girlMove;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function:step-start ;
+	position: absolute;
+	bottom: 40px;
+	right: 1px;
+	transition: right 10s linear;
+}
+.girl:hover{
+	right:600px;
+	
+}
+@-webkit-keyframes girlMove{
+	0%{
+		background-position-x: 1260px;
+	}
+	16%{
+		background-position-x: 1080px;
+	}
+	
+	32%{
+		background-position-x: 900px;
+	}
+	48%{
+		background-position-x: 720px;
+	}
+	64%{
+		background-position-x: 540px;
+	}
+	80%{
+		background-position-x: 360px;
+	}
+	100%{
+		background-position-x: 180px;
+	}
+}
+.floor{
+	width: 100%;
+	height: 79px;
+	position: absolute;
+	bottom: 0;
+	background:url(../img/ground.png) ;
+	-webkit-animation-name: floorMove;
+	-webkit-animation-duration: 1s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-timing-function:linear ;
+}
+@-webkit-keyframes floorMove{
+	from{
+		background-position-x: 0px;
+	}
+	to{
+		background-position-x: 79px;
+	}
+}
+audio{
+	position: fixed;
+	right: 235px;
+	bottom: 20px;
+	opacity: 0.5;
+}
